@@ -133,7 +133,7 @@ main {
 
 /* Topics section */
 .topics-list {
-  margin-top: 1rem;
+  margin-top: -2rem;
   line-height: 1.8;
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +141,7 @@ main {
 }
 
 section.topics {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .topic-tag {
@@ -251,7 +251,7 @@ section.topics {
 }
 
 .post-topics {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .post-topics h3 {
