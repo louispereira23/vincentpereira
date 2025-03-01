@@ -1,0 +1,265 @@
+/* Admin styles */
+.admin-login,
+.admin-dashboard,
+.post-editor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: rgba(206, 205, 195, 0.05);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 2px rgba(206, 205, 195, 0.2);
+}
+
+.field-note {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted-color);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: rgba(206, 205, 195, 0.15);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-primary:hover {
+  background-color: rgba(206, 205, 195, 0.25);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(206, 205, 195, 0.05);
+}
+
+.btn-danger {
+  background-color: rgba(206, 205, 195, 0.15);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-danger:hover {
+  background-color: rgba(206, 205, 195, 0.25);
+}
+
+.btn-small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  height: 32px; /* Fixed height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.actions a.btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-form {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Message styles */
+.error-message,
+.success-message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  background-color: rgba(206, 205, 195, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+/* Dashboard actions */
+.dashboard-actions {
+  margin: 1.5rem 0;
+}
+
+/* Post list styling */
+.posts-list {
+  margin-top: 2rem;
+}
+
+.posts-list table {
+  width: 100%;
+}
+
+.posts-list a {
+  text-decoration: underline;
+}
+
+.posts-list .actions a {
+  text-decoration: none;
+}
+
+/* Icon buttons for mobile */
+.btn-icon {
+  display: none;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+  
+  .btn-small {
+    width: auto;
+    text-align: center;
+    min-width: 32px;
+  }
+  
+  table th, 
+  table td {
+    padding: 0.5rem;
+  }
+  
+  .posts-list table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  /* Show icon buttons on mobile */
+  .btn-text {
+    display: none;
+  }
+  
+  .btn-icon {
+    display: inline;
+  }
+  
+  .actions .btn-small {
+    padding: 0.35rem 0.5rem;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .posts-list tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+  }
+  
+  .posts-list td, 
+  .posts-list th {
+    border: none;
+    padding: 0.25rem 0;
+  }
+  
+  .posts-list thead {
+    display: none;
+  }
+  
+  .posts-list tbody {
+    display: block;
+  }
+  
+  .posts-list .actions {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+} 
